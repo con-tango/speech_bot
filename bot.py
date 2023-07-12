@@ -2,7 +2,7 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
 from voice import text_to_file
 
-TOKEN = "6175717243:AAEuEJslZKK84IWTvelYpn_nqiYEo6KC98Q"
+
 
 async def hello(update, context):
     await update.message.reply_text(f'Hello {update.effective_user.first_name}')
