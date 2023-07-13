@@ -1,8 +1,12 @@
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
 from voice import text_to_file
+import sys
+
 
 TOKEN = r"C:\Users\dshylko\Documents\new_4.txt"
+with open(TOKEN) as f:
+    token = f.read()
 
 async def hello(update, context):
     await update.message.reply_text(f'Hello {update.effective_user.first_name}')
@@ -17,7 +21,7 @@ async def reply(update, context):
     await update.message.reply_voice(voice=open(file_name, 'rb'))
 
 
-app = ApplicationBuilder().token(TOKEN).build()
+app = ApplicationBuilder().token(token).build()
 
 app.add_handler(CommandHandler("hello", hello))
 app.add_handler(CommandHandler("help", help_handler))
