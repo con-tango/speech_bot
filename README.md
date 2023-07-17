@@ -14,7 +14,7 @@ Create voice.py script, import there pyttsx3  and subprocess libraries.
 Initiate engine by pyttsx3. Set voice and speech rate. 
 Define text_to_file function there. Outputs will be saved in data/ folder.
 Create bot.py script. Input your bot’s token there (not explicitly). Define help_handler and reply functions.
-Run “python bot.py” command in venv. Go to your bot, input any text and enjoy its audio version.
+Run “python bot.py” command in venv. Go to your bot in Telegram, input any text and enjoy its audio version.
 :)
 
 
